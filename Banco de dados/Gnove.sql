@@ -32,17 +32,6 @@ create table Dados_veiculo(
   foreign key (cod_usuario) references Usuario (cod_usuario) on delete cascade on update cascade
 );
 
-CREATE TABLE Cartao_credito(
-  opcao_pagamento VARCHAR(10) NOT NULL ,
-  numero_cartao VARCHAR(16) NOT NULL,
-  nome_titular VARCHAR(255) NOT NULL ,
-  data_vencimento DATE NOT NULL,
-  cod_seguranca int (5) NOT NULL,
-  cod_usuario INTEGER NOT NULL,
-  PRIMARY KEY (numero_cartao),
-  FOREIGN KEY (cod_usuario) REFERENCES Usuario (cod_usuario) on delete cascade on update cascade
-);
-
 create table Mensagem(
   cod_mensagem INTEGER not null auto_increment,
   mensagem varchar(150),
@@ -72,11 +61,15 @@ foreign key (cod_usuario) references Usuario (cod_usuario) on delete cascade on 
 CREATE TABLE Loja(
   cod_loja INTEGER NOT NULL AUTO_INCREMENT,
   CNPJ VARCHAR(50) NOT NULL,
+  razaoSocial VARCHAR(255),
   nome_loja VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   senha VARCHAR(255) NOT NULL,
   logradouro_loja VARCHAR(255) NOT NULL,
   telefone_loja VARCHAR(50) NOT NULL,
+  nome_imagem varchar(25),
+  tamanho_imagem varchar(25),
+  tipo_imagem varchar(25),
   PRIMARY KEY (cod_loja)
 );
 
@@ -95,7 +88,7 @@ primary key (cod_marca)
 CREATE TABLE Produto(
   cod_produto INTEGER AUTO_INCREMENT NOT NULL,
   cod_loja INTEGER NOT NULL,
-  link VARCHAR(255),
+  link LONGTEXT,
   nome_imagem varchar(25),
   tamanho_imagem varchar(25),
   tipo_imagem varchar(25),
@@ -108,20 +101,6 @@ CREATE TABLE Produto(
   FOREIGN KEY (cod_loja) REFERENCES Loja (cod_loja) on delete cascade on update cascade,
   foreign key (cod_categoria) references Categoria (cod_categoria),
   foreign key (cod_marca) references Marca (cod_marca)
-);
-
-CREATE TABLE Compra_produto(
-  cod_compra INTEGER AUTO_INCREMENT NOT NULL,
-  cod_produto INTEGER NOT NULL,
-  cod_usuario INTEGER NOT NULL,
-  data_compra TIMESTAMP DEFAULT current_timestamp(),
-  data_vencimento DATE AS (DATE_ADD(data_compra, interval 05 DAY)),
-  valor double(10,2) NOT NULL,
-  parcela INTEGER NOT NULL,
-  forma_pagamento VARCHAR(10) NOT NULL,
-  PRIMARY KEY (cod_compra),
-  FOREIGN KEY (cod_produto) REFERENCES Produto (cod_produto) on delete cascade on update cascade,
-  FOREIGN KEY (cod_usuario) REFERENCES Usuario (cod_usuario) on delete cascade on update cascade
 );
 
 INSERT Marca (cod_marca, nome) VALUES
