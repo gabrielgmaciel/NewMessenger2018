@@ -20,7 +20,7 @@
             } else {
                 //placa nao encontrada
                 echo "<script> alert('Placa não encontrada em nossos registros!') </script>";
-                echo "<script>location.href=XX-home.phpp'</script>";
+                echo "<script>location.href='home.php'</script>";
             }
         }
 ?>

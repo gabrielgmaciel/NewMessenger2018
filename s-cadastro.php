@@ -44,12 +44,10 @@ if ($email != null) {
             echo $result;
 
             if ($result == 1) {
-                echo "Foi aeeeee!";
-                //echo "<script> alert(' cadastrado realizado! ') </script>";
-                //echo "<script>location.href='index.php'</script>";
-            } else {
-                echo "Deu merda! :'(";
                 header("location: cadastro.php");
+            } else {
+                echo "<script> alert(' cadastrado realizado! ') </script>";
+                echo "<script>location.href='index.php'</script>";
             }
         }
     }

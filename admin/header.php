@@ -11,7 +11,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="users.php">Usuários</a></li>
 				<li><a href="frases.php">Frases</a></li>
-                <li><a href="inserir_produto.php">Inserir Produtos</a></li>
+                <li><a href="lista_loja.php">Lojas Cadastradas</a></li>
                 <li><a href="inserir_loja.php">Cadastrar Loja</a></li>
             </ul>
 			<ul class="nav navbar-nav navbar-right">

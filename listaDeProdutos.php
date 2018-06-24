@@ -37,7 +37,7 @@ footer p {
         <td class="" bgcolor="" width="25%" height="50" title="<?php echo $array['nome_produto']?>">
             <center>
                 <a href ="paginaProdutos.php?id=<?php echo $array['cod_produto']?>">
-                    <img src="admin/<?php echo $array['nome_imagem']?>" class="icone" height="">
+                    <img src="loja/<?php echo $array['nome_imagem']?>" class="icone" height="140">
                     <p><?php echo $array['nome_produto']?></p>
                     <p><?php echo "R$: ".number_format($array['preco_produto'], 2, ',', '.')?></p>
             </center>

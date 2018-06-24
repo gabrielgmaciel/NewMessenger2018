@@ -22,12 +22,12 @@ require_once("conect.php");
             $return = mysqli_fetch_assoc($result);
             $_SESSION['nomeUsuario'] = $return['nome'];
             $_SESSION['userCod'] = $return['cod_usuario'];
-            echo "<script>location.href=XX-home.phphp'</script>";
+            echo "<script>location.href='home.php'</script>";
             return true;
         }else
         {
             echo "<script> alert('Email/senha incorreto!') </script>";
-            echo "<script>location.href=ndex.php</script>";
+            echo "<script>location.href='index.php'</script>";
         }
     }
 //função para proteger paginas que devem ser acessadas somente se tiver um log
@@ -45,7 +45,7 @@ require_once("conect.php");
         unset($_SESSION['userCod']);
         session_destroy();
         echo "<script> alert('Efetue o login para acessar a página!') </script>";
-        echo "<script>location.href='XX-index.php'</script>";
+        echo "<script>location.href='index.php'</script>";
     }
     //função para logoff
     function logoff()
@@ -53,7 +53,7 @@ require_once("conect.php");
         unset($_SESSION['nomeUsuario']);
         unset($_SESSION['userCod']);
         session_destroy();
-        echo "<script>location.href='XX-index.php'</script>";
+        echo "<script>location.href='index.php'</script>";
     }
     //função para excluir conta
     function excluiConta()
@@ -62,7 +62,7 @@ require_once("conect.php");
         unset($_SESSION['userCod']);
         session_destroy();
         echo "<script> alert('Conta excluída com sucesso!') </script>";
-        echo "<script>location.href='XX-index.php'</script>";
+        echo "<script>location.href='index.php'</script>";
     }
 
 

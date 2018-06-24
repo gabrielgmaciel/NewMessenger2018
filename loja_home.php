@@ -42,28 +42,28 @@
     <tr>
     <th class="" bgcolor="" width="25%" height="50" title="Volkswagen">
         <center>
-            <a href ="configuracao.php">
+            <a href ="listaMacas.php?id=1">
                 <img src="img/marcas/01.jpg" class="icone" height="">
         </center>
              </a>
     </th>
     <th class="" bgcolor="" width="25%" height="50" title="Chevrolet">
         <center>
-            <a href ="configuracao.php">
+            <a href ="listaMacas.php?id=2">
                 <img src="img/marcas/02.jpg" class="icone" height="">
         </center>
              </a>
     </th>
     <th class="" bgcolor="" width="25%" height="50" title="Fiat">
         <center>
-            <a href ="configuracao.php">
+            <a href ="listaMacas.php?id=3">
                 <img src="img/marcas/03.jpg" class="icone" height="">
         </center>
              </a>
     </th>
     <th class="" bgcolor="" width="25%" height="50" title="Ford">
         <center>
-            <a href ="configuracao.php">
+            <a href ="listaMacas.php?id=4">
                 <img src="img/marcas/04.jpg" class="icone" height="">
         </center>
              </a>
@@ -74,28 +74,28 @@
     <tr>
     <th class="" bgcolor="" width="25%" height="50" title="Hyundai">
         <center>
-            <a href ="configuracao.php">
+            <a href ="listaMacas.php?id=5">
                 <img src="img/marcas/05.jpg" class="icone" height="">
         </center>
              </a>
     </th>
     <th class="" bgcolor="" width="25%" height="50" title="Toyota">
         <center>
-            <a href ="configuracao.php">
+            <a href ="listaMacas.php?id=6">
                 <img src="img/marcas/06.jpg" class="icone" height="">
         </center>
              </a>
     </th>
     <th class="" bgcolor="" width="25%" height="50" title="Honda">
         <center>
-            <a href ="configuracao.php">
+            <a href ="listaMacas.php?id=7">
                 <img src="img/marcas/07.png" class="icone" height="">
         </center>
              </a>
     </th>
     <th class="" bgcolor="" width="25%" height="50" title="Citroen">
         <center>
-            <a href ="configuracao.php">
+            <a href ="listaMacas.php?id=8">
                 <img src="img/marcas/08.png" class="icone" height="">
         </center>
              </a>
@@ -103,6 +103,6 @@
     </tr>
   </tbody>
 </table>
-
+<br><br>
 </body>
 </html>

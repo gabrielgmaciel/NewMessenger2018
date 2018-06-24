@@ -41,7 +41,7 @@ footer p {
 				<div class="wrapper row">
 					<div class="preview col-md-6">
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="admin/<?php echo $array['nome_imagem']?>" /></div>
+						  <div class="tab-pane active" id="pic-1"><img src="loja/<?php echo $array['nome_imagem']?>" /></div>
 						</div>
 					</div>
 					<div class="details col-md-6">

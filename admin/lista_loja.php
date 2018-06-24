@@ -21,7 +21,6 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Logo</th>
               <th>Nome da loja</th>
               <th>CNPJ</th>
@@ -30,55 +29,33 @@
 			  <th>Excluir Loja</th>
             </tr>
           </thead>
+            <?php
+            //$user = $_SESSION['userCod'];
+            function listaProduto($conexao, $user)
+            {
+            $sql = "SELECT * FROM Loja WHERE cod_loja = 9";
+            $resultado = mysqli_query($conexao,$sql);
+            while ($array=mysqli_fetch_assoc($resultado))
+            { ?>
           <tbody id="myTable">
             <tr>
-              <td>1</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-			  <td><button class="btn btn-xs btn-primary pull-left">X</button></td>
+              <td><img height="60" width="100" src="<?php echo $array['nome_imagem']?>" /></td>
+              <td><? echo $array['nome_loja']; ?></td>
+              <td><? echo $array['CNPJ']; ?></td>
+              <td><? echo $array['email']; ?></td>
+              <td><? echo $array['telefone_loja']; ?></td>
+			  <td><a href="apaga_loja.php?codigo=<?php echo $codigo = $array['cod_loja'];?>
+                "onclick="return confirm('Deseja realmente excluir essa loja?')">
+                      <img src="img/lixeira.ico" width="25px" height="25px"></a></td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-			  <td><button class="btn btn-xs btn-primary pull-left">X</button></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-			  <td><button class="btn btn-xs btn-primary pull-left">X</button></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-			  <td><button class="btn btn-xs btn-primary pull-left">X</button></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-			  <td><button class="btn btn-xs btn-primary pull-left">X</button></td>
-            </tr>           
+            <?php } ?>
+            <?php  }
+            listaProduto($conexao, $user);
+            ?>
          </tbody>
         </table>   
 	</div>
+        <br><br>
 </div>
 </body>
 </html>

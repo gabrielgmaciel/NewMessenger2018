@@ -17,7 +17,7 @@
 
                     if($result == 1){
                         echo "<script> alert('Mensagem enviada!') </script>";
-                        echo "<script>location.href=home.phpcript>";
+                        echo "<script>location.href='home.php'</script>";
                     }else{
                         echo "<script> alert('Erro ao enviar a mensagem!') </script>";
                         echo "<script>location.href='envio_mensagem.php'</script>";
