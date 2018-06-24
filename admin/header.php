@@ -11,7 +11,9 @@
 			<ul class="nav navbar-nav">
 				<li><a href="users.php">Usuários</a></li>
 				<li><a href="frases.php">Frases</a></li>
-			</ul>
+                <li><a href="inserir_produto.php">Inserir Produtos</a></li>
+                <li><a href="inserir_loja.php">Cadastrar Loja</a></li>
+            </ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="s-login.php?x=1"><span class="glyphicon"></span>Sair</a></li>
 			</ul>

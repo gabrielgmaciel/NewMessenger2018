@@ -22,7 +22,7 @@
 
     <div align="left" class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
         <form name="form1" novalidate method="post" action="s-cadastro.php">
-            <h2><font face="Arial" color="white">Cadastre-se ou faça seu <a href="index.php" color="white">Login</a></h2>
+            <h2><font face="Arial" color="white">Cadastre-se ou faça seu <a href="ndex.php" color="white">Login</a></h2>
             <hr class="colorgraph">
 
             <div class="form-group">
@@ -86,7 +86,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6"><input class="btn btn-primary btn-block btn-lg" onclick="return validaForm();" type="submit" value="CADASTRAR" style="margin: 0 auto 4px;"></div>
                 <div class="col-xs-12 col-md-6">
-                    <a href="index.php">
+                    <a href="ndex.php">
                         <button type="button" class="btn btn-danger btn-block btn-lg">CANCELAR</button></a>
                 </div>
                 <br><br>

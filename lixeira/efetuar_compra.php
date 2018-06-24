@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-
+<?php require_once "conect.php";?>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" content="width=device-width, initial-scale=1.0" name="viewport">
@@ -55,7 +55,7 @@ footer p {
           <li><a href="#">Lanterna</a></li>
         </ul>
       </li>
-      <li><a href="home.php">Messenger Driver</a></li>
+      <li><a href="XX-home.php">Messenger Driver</a></li>
       <li><a href="#">Compras</a></li>
     </ul>
   </div>

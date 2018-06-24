@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require_once "conect.php";?>
 <html lang="en">
 <head>
   <title>Messenger Driver Compras</title>
@@ -7,7 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<body>
 
 <div class="container-fluid" height="100%">
 <div class="row">
@@ -28,17 +28,38 @@
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categorias <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="categoria_parachoque.php">Parachoque</a></li>
-          <li><a href="categoria_pneu.php">Pneu</a></li>
+          <li><a href="listaDeProdutos.php">Pneu</a></li>
           <li><a href="categoria_farol.php">Farol</a></li>
           <li><a href="categoria_volante.php">Volante</a></li>
           <li><a href="categoria_lanterna.php">Lanterna</a></li>
         </ul>
       </li>
-      <li><a href="home.php">Menseger Drive</a></li>
+      <li><a href="XX-home.php">Menseger Drive</a></li>
       <li><a href="#">Compras</a></li>
     </ul>
   </div>
 </nav>
+<div>
+    <form>
+        <select>
+            <option>Todos</option>
+            <?php
+            function listaMarcas($conexao)
+            {
+                $sql = "SELECT * FROM Marca ";
+                $resultado = mysqli_query($conexao,$sql);
+                while ($array=mysqli_fetch_assoc($resultado))
+                { ?>
+                    <option><?php echo $array['nome']?></option>
+
+                <?php } ?>
+            <?php  }
+            listaMarcas($conexao);
+            ?>
+        </select>
+    </form>
+    <br>
+</div>
 <table class="table" border="2" width="10%">
   <thead>
     <tr>

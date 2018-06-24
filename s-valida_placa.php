@@ -8,7 +8,7 @@
 
         if ($letras == "" && $numeros == "") {
             echo "<script> alert('Placa não informada!') </script>";
-            echo "<script>location.href='home.php'</script>";
+            echo "<script>location.href=XXX-home.phphp</script>";
         } else {
             global $conexao;
             $procura = $conexao->query("SELECT placa FROM dados_veiculo WHERE placa = '$placa'");
@@ -20,7 +20,7 @@
             } else {
                 //placa nao encontrada
                 echo "<script> alert('Placa não encontrada em nossos registros!') </script>";
-                echo "<script>location.href='home.php'</script>";
+                echo "<script>location.href=XX-home.phpp'</script>";
             }
         }
 ?>

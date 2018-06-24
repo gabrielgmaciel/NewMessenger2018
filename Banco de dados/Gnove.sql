@@ -71,7 +71,7 @@ foreign key (cod_usuario) references Usuario (cod_usuario) on delete cascade on 
 
 CREATE TABLE Loja(
   cod_loja INTEGER NOT NULL AUTO_INCREMENT,
-  CNPJ VARCHAR(14) NOT NULL,
+  CNPJ VARCHAR(50) NOT NULL,
   nome_loja VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   senha VARCHAR(255) NOT NULL,
@@ -95,12 +95,14 @@ primary key (cod_marca)
 CREATE TABLE Produto(
   cod_produto INTEGER AUTO_INCREMENT NOT NULL,
   cod_loja INTEGER NOT NULL,
-  imagen_produto BLOB,
+  link VARCHAR(255),
+  nome_imagem varchar(25),
+  tamanho_imagem varchar(25),
+  tipo_imagem varchar(25),
   nome_produto VARCHAR(255) NOT NULL,
-  preco_produto float(5,2) NOT NULL,
+  preco_produto double(8,2) NOT NULL,
   cod_categoria integer not null,
   cod_marca integer not null,
-  promocao BOOLEAN NOT NULL,
   descricao_produto LONGTEXT NOT NULL,
   PRIMARY KEY (cod_produto),
   FOREIGN KEY (cod_loja) REFERENCES Loja (cod_loja) on delete cascade on update cascade,
@@ -114,10 +116,28 @@ CREATE TABLE Compra_produto(
   cod_usuario INTEGER NOT NULL,
   data_compra TIMESTAMP DEFAULT current_timestamp(),
   data_vencimento DATE AS (DATE_ADD(data_compra, interval 05 DAY)),
-  valor FLOAT(7,2) NOT NULL,
+  valor double(10,2) NOT NULL,
   parcela INTEGER NOT NULL,
   forma_pagamento VARCHAR(10) NOT NULL,
   PRIMARY KEY (cod_compra),
   FOREIGN KEY (cod_produto) REFERENCES Produto (cod_produto) on delete cascade on update cascade,
   FOREIGN KEY (cod_usuario) REFERENCES Usuario (cod_usuario) on delete cascade on update cascade
 );
+
+INSERT Marca (cod_marca, nome) VALUES
+  (1, "Volkswagen"),
+  (2, "Chevrolet"),
+  (3, "Fiat"),
+  (4, "Ford"),
+  (5, "Hyundai"),
+  (6, "Toyota"),
+  (7, "Honda"),
+  (8, "Citroen");
+
+INSERT Categoria (cod_categoria, nome) VALUES
+  (1, "Parachoque"),
+  (2, "Pneu"),
+  (3, "Farol"),
+  (4, "Volante"),
+  (5, "Lanterna");
+

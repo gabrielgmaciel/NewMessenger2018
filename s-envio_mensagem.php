@@ -7,7 +7,7 @@
 
 
        if ($select == '*Selecione'){
-            echo "<script>location.href='home.php'</script>";
+            echo "<script>location.href=XX-home.phphp'</script>";
         } else
                 {
                     $query = $conexao -> query("INSERT INTO Mensagem_usuario (cod_usuario, placa, cod_mensagem_recebida, mensagem)
@@ -17,7 +17,7 @@
 
                     if($result == 1){
                         echo "<script> alert('Mensagem enviada!') </script>";
-                        echo "<script>location.href='home.php'</script>";
+                        echo "<script>location.href=home.phpcript>";
                     }else{
                         echo "<script> alert('Erro ao enviar a mensagem!') </script>";
                         echo "<script>location.href='envio_mensagem.php'</script>";
