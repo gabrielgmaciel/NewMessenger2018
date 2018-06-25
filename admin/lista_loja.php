@@ -30,27 +30,26 @@
             </tr>
           </thead>
             <?php
-            //$user = $_SESSION['userCod'];
-            function listaProduto($conexao, $user)
+            function listaProduto($conexao)
             {
-            $sql = "SELECT * FROM Loja WHERE cod_loja = 9";
+            $sql = "SELECT * FROM Loja";
             $resultado = mysqli_query($conexao,$sql);
             while ($array=mysqli_fetch_assoc($resultado))
             { ?>
           <tbody id="myTable">
             <tr>
-              <td><img height="60" width="100" src="<?php echo $array['nome_imagem']?>" /></td>
-              <td><? echo $array['nome_loja']; ?></td>
-              <td><? echo $array['CNPJ']; ?></td>
-              <td><? echo $array['email']; ?></td>
-              <td><? echo $array['telefone_loja']; ?></td>
+              <td><center><img height="60" width="100" src="<?php echo $array['nome_imagem']?>"/></center></td>
+              <td><?php echo $array['nome_loja']; ?></td>
+              <td><?php echo $array['CNPJ']; ?></td>
+              <td><?php echo $array['email']; ?></td>
+              <td><?php echo $array['telefone_loja']; ?></td>
 			  <td><a href="apaga_loja.php?codigo=<?php echo $codigo = $array['cod_loja'];?>
                 "onclick="return confirm('Deseja realmente excluir essa loja?')">
                       <img src="img/lixeira.ico" width="25px" height="25px"></a></td>
             </tr>
             <?php } ?>
             <?php  }
-            listaProduto($conexao, $user);
+            listaProduto($conexao);
             ?>
          </tbody>
         </table>   

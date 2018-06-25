@@ -41,7 +41,7 @@ if ($email != null) {
 
             $result = mysqli_commit($conexao, $query1, $query2, $query3, $query4);
 
-            echo $result;
+            //echo $result;
 
             if ($result == 1) {
                 header("location: cadastro.php");

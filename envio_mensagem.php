@@ -57,7 +57,7 @@
                                 $resultado = mysqli_query($conexao,$sql);
                                 while ($array=mysqli_fetch_assoc($resultado))
                                 { ?>
-                                    <option><?php echo utf8_encode($array['mensagem'])?></option>
+                                    <option><?php echo $array['mensagem']?></option>
             
                                <?php } ?>
                           <?php  }

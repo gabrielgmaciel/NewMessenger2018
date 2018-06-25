@@ -12,6 +12,14 @@
     $tipo = $_FILES['imagem']['type'];
     $nome = $_FILES['imagem']['name'];
 
+    /*echo $nomeProduto."<-nome profuto<br>";
+echo $descricaoProduto."<-descrição produto<br>";
+echo $preco."<-preco<br>";
+echo $cod_loja.",-cod loja<br>";
+echo $cod_categoria."<-cod cat<br>";
+echo $link."<-llink<br>";
+echo $marca."<-marca<br>";*/
+
     if ( $imagem != "none" ) {
        $fp = fopen($imagem, "rb");
        $conteudo = fread($fp, $tamanho);
@@ -34,7 +42,7 @@
         echo "<script>location.href='inserir_produto.php'</script>";
     }else{
         echo "<script> alert('Erro ao inserir produto') </script>";
-        echo "<script>location.href='inserir_img.php'</script>";
+        echo "<script>location.href='inserir_produto.php'</script>";
     }
 ?>
 

@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <?php require_once "conect.php";
 require_once "header.php";
+require_once "s-login.php"; protegePagina();
 ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="aro12.css">
@@ -61,7 +62,7 @@ footer p {
 						<h2 class="price">Valor: <span bgcolor="#00000"><?php echo "R$: ".number_format($array['preco_produto'], 2, ',', '.')?></span></h2>
 						<!--<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> -->
 						<div class="action">
-                            <a href="<? echo $array['link']; ?>">
+                            <a href="<?php echo $array['link']; ?>">
 							<button class="btn btn-success" type="button">
                                 Compra Agora
                             </button>

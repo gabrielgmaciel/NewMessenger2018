@@ -42,7 +42,7 @@
                 function listaUsuarios($conexao)
                 {
 
-                    $sql="SELECT * FROM Usuario u, Telefone, Endereco ORDER BY u.cod_usuario";
+                    $sql="SELECT * FROM Usuario u, Telefone t, Endereco e WHERE u.cod_usuario = e.cod_usuario = t.cod_usuario ORDER BY u.cod_usuario;";
                     $resultado= mysqli_query($conexao,$sql );
 
 

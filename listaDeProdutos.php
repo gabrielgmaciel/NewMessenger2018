@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php require_once "conect.php";
 require_once "header.php";
+require_once "s-login.php"; protegePagina();
 ?>
 <style>
 footer{

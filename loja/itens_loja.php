@@ -7,7 +7,7 @@
        <?php include "header.php";
         include "s-login.php";
         include "conect.php";
-        protegePagina();?> 
+        protegePagina();?>
         <title>Users</title>
 		<link  rel="stylesheet" href="itens.css">
 </head>
@@ -31,14 +31,14 @@
             <?php
             function listaProduto($conexao)
             {
-            $sql = "select * from Produto where cod_loja = 8";
+            $sql = "select * from Produto where cod_loja = '{$_SESSION['userCod']}'";
             $resultado = mysqli_query($conexao,$sql);
             while ($array=mysqli_fetch_assoc($resultado))
             { ?>
                 <tr>
-                    <td><? echo $array['nome_produto']; ?></td>
+                    <td><?php echo $array['nome_produto']; ?></td>
                     <td><?php echo "R$: ".number_format($array['preco_produto'], 2, ',', '.')?></td>
-					<td><center><img src="<? echo $array['nome_imagem']; ?>" height="80"/></center></td>
+					<td><center><img src="<?php echo $array['nome_imagem']; ?>" height="80"/></center></td>
                     <td><a href="apagar_produto.php?codigo=<?php echo $codigo = $array['cod_produto'];?>
                 "onclick="return confirm('Deseja realmente excluir esse produto?')">
                             <img src="img/lixeira.ico" width="25px" height="25px"></a></td>
