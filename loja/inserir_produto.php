@@ -17,7 +17,7 @@
     <div class="container">
 	Nome:<input type="text" class="form-control" maxlength="80" placeholder="Nome do Produto" name="nome_produto"/>
             <input type="hidden" name="loja" value="<?php echo $_SESSION['userCod']; ?>">
-    Preço:<input type="text" class="form-control" maxlength="6" placeholder="Preço do Produto (Acrescentar vírgula)" name="preco" type="text"/>
+    Preço:<input type="text" class="form-control" maxlength="10" placeholder="Preço do Produto (Acrescentar vírgula)" name="preco" type="text"/>
     Categoria:<select class="form-control form-control-lg" name="categoria">
             <option>*Selecione</option>
             <?php
