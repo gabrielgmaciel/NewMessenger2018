@@ -12,17 +12,6 @@ create table Usuario(
   primary key(cod_usuario)
 );
 
-create table Endereco(
-  cod_usuario integer not null,
-  cod_endereco integer not null auto_increment,
-  lougradouro VARCHAR(255) NOT NULL,
-  cidade VARCHAR(50) NOT NULL,
-  estado CHAR (3) NOT NULL,
-  CEP VARCHAR(20) NOT NULL,
-  primary key (cod_endereco),
-  foreign key (cod_usuario) references Usuario (cod_usuario) on delete cascade on update cascade
-);
-
 create table Dados_veiculo(
   cod_usuario INTEGER NOT NULL,
   tipo_veiculo VARCHAR(10) not null,

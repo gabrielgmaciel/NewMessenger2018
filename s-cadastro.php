@@ -9,10 +9,6 @@ $senha1 = isset($_POST['senha1']) ? $_POST['senha1'] : '';;
 $veiculo = isset($_POST['tipo']) ? $_POST['tipo'] : '';;
 $placa = isset($_POST['placa']) ? $_POST['placa'] : '';;
 $modelo = isset($_POST['modelo']) ? $_POST['modelo'] : '';;
-$lougradouro = isset($_POST['lougradouro']) ? $_POST['lougradouro'] : '';;
-$cidade = isset($_POST['cidade']) ? $_POST['cidade'] : '';;
-$estado = isset($_POST['estado']) ? $_POST['estado'] : '';;
-$cep = isset($_POST['cep']) ? $_POST['cep'] : '';;
 
 
 if ($email != null) {
@@ -36,10 +32,8 @@ if ($email != null) {
                                             VALUES ((select last_insert_id()), upper('{$placa}'), '{$modelo}', '{$veiculo}')");
             $query3 = $conexao->query("INSERT INTO Telefone( cod_telefone, telefone, cod_usuario)
                                             VALUES (null, '{$telefone}', (select last_insert_id()))");
-            $query4 = $conexao->query("INSERT INTO Endereco(cod_usuario, cod_endereco, lougradouro, cidade, estado, CEP)
-                                            VALUES ((select last_insert_id()), null, '{$lougradouro}', '{$cidade}', '{$estado}', '{$cep}')");
 
-            $result = mysqli_commit($conexao, $query1, $query2, $query3, $query4);
+            $result = mysqli_commit($conexao, $query1, $query2, $query3);
 
             //echo $result;
 
