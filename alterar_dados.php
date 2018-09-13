@@ -80,19 +80,6 @@ $return = mysqli_fetch_assoc($result);
                     </div>
                 </div>
             </div>
-                <label class=" control-label"><h2 style="color: floralwhite">Endereço</h2></label>
-                <div class="form-group">
-                    <input type="text" class="form-control input-lg" name="lougradouro" placeholder="Endereço" maxlength="50"/>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control input-lg" name="cidade" placeholder="Cidade" maxlength="50"/>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control input-lg" name="estado" placeholder="Estado" maxlength="50"/>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control input-lg" name="cep" placeholder="CEP" maxlength="50"/>
-                </div>
             <div class="form-group">
                   <input type="submit" class="btn btn-primary btn-block btn-lg" onclick="return validaForm();"  value="ALTERAR" style="margin: 0 auto 4px;">
                   <a href="configuracao.php">

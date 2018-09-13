@@ -28,10 +28,6 @@
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Telefone</th>
-                        <th>Endereço</th>
-                        <th>Cidade</th>
-                        <th>Estado</th>
-                        <th>Cep</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -42,7 +38,7 @@
                 function listaUsuarios($conexao)
                 {
 
-                    $sql="SELECT * FROM Usuario u, Telefone, Endereco ORDER BY u.cod_usuario";
+                    $sql="SELECT * FROM Usuario u, Telefone t WHERE u.cod_usuario = t.cod_usuario ORDER BY u.cod_usuario;";
                     $resultado= mysqli_query($conexao,$sql );
 
 
@@ -51,10 +47,6 @@
                             <td> <?php echo $array['nome'];?></td>
                             <td> <?php echo $array['email'];?></td>
                             <td> <?php echo $array['telefone'];?></td>
-                            <td> <?php echo $array['lougradouro'];?></td>
-                            <td> <?php echo $array['cidade'];?></td>
-                            <td> <?php echo $array['estado'];?></td>
-                            <td> <?php echo $array['CEP'];?></td>
                             <td align='center'><a href="apaga_usuario.php?codigo=<?php echo $codigo;?>
                             "onclick="return confirm('Deseja realmente excluir o esse usuário?')"><img src="img/lixeira.ico" width="25px" height="25px"></a></td>
                         </tr>

@@ -21,7 +21,7 @@
                             <span class="fa fa-spinner bigicon"></span>
                             <h2>Login</h2>
                             <div>
-                                <input name="logon" type="text" placeholder="Usuário" onkeypress="check_values();">
+                                <input name="email" type="text" placeholder="Usuário" onkeypress="check_values();">
                                 <input name="senha" type="password" placeholder="Senha" onkeypress="check_values();">
                                 <input type="submit" class="btn-danger" value="Entrar" onclick="return validaForm();">
                             </div>
@@ -31,13 +31,13 @@
     <script type="text/javascript">
         function validaForm()
         {
-            var usuario = form.logon.value;
+            var usuario = form.email.value;
             var senha = form.senha.value;
 
             if (usuario == "" || senha == "")
             {
                 alert("Insira usuario e senha!");
-                form.logon.select();
+                form.email.select();
                 return false;
             }
         }

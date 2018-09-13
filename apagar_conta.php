@@ -1,3 +1,4 @@
+<?php require_once "conect.php"; require_once "s-login.php"; protegePagina();?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

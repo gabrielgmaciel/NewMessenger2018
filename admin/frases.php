@@ -53,7 +53,7 @@ if(isset ($_GET["admin"]) && $_GET["admin"]==1)
     </div>
     <div class="container">
         <center>
-            <input type="text" class="form-control" maxlength="20" placeholder="Adicionar uma nova Frase" name="mensagem">
+            <input type="text" class="form-control" maxlength="50" placeholder="Adicionar uma nova Frase" name="mensagem">
             <button class="btn btn-success" type="submit" onclick="return validaForm();">Adicionar</button>
         </center>
     </div><br><br><br><br><br><br><br>

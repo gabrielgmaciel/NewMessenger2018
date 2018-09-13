@@ -16,23 +16,8 @@
 <form enctype="multipart/form-data" action="s-cadastroProduto.php" method="post">
     <div class="container">
 	Nome:<input type="text" class="form-control" maxlength="80" placeholder="Nome do Produto" name="nome_produto"/>
-	Loja:<select class="form-control form-control-lg" name="loja">
-            <option>*Selecione</option>
-            <?php
-            function listaLoja($conexao)
-            {
-                $sql = "SELECT * FROM Loja";
-                $resultado = mysqli_query($conexao,$sql);
-                while ($array=mysqli_fetch_assoc($resultado))
-                { ?>
-                    <option value="<?php echo $array['cod_loja'] ?>"><?php echo utf8_encode($array['nome_loja'])?></option>
-
-                <?php } ?>
-            <?php  }
-            listaLoja($conexao);
-            ?>
-        </select>
-    Preço:<input type="text" class="form-control" maxlength="6" placeholder="Preço do Produto (Acrescentar vírgula)" name="preco" type="text"/>
+            <input type="hidden" name="loja" value="<?php echo $_SESSION['userCod']; ?>">
+    Preço:<input type="text" class="form-control" maxlength="10" placeholder="Preço do Produto (Acrescentar vírgula)" name="preco" type="text"/>
     Categoria:<select class="form-control form-control-lg" name="categoria">
             <option>*Selecione</option>
             <?php
@@ -42,7 +27,7 @@
                 $resultado = mysqli_query($conexao,$sql);
                 while ($array=mysqli_fetch_assoc($resultado))
                 { ?>
-                    <option value="<?php echo $array['cod_categoria']?>"><?php echo utf8_encode($array['nome'])?></option>
+                    <option value="<?php echo $array['cod_categoria']?>"><?php echo $array['nome']?></option>
 
                 <?php } ?>
             <?php  }

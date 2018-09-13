@@ -69,20 +69,6 @@
                 <input type="text" class="form-control input-lg" name="modelo" placeholder="Modelo do Véiculo" maxlength="50"/>
                 <span id="modelo-message" class="text-danger" hidden></span>
             </div>
-            <label class=" control-label"><h2>Endereço</h2></label>
-            <div class="form-group">
-                <input type="text" class="form-control input-lg" name="lougradouro" placeholder="Endereço" maxlength="50"/>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control input-lg" name="cidade" placeholder="Cidade" maxlength="50"/>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control input-lg" name="estado" placeholder="Estado" maxlength="50"/>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control input-lg" name="cep" placeholder="CEP" maxlength="50"/>
-            </div>
-            <hr class="colorgraph">
             <div class="row">
                 <div class="col-xs-12 col-md-6"><input class="btn btn-primary btn-block btn-lg" onclick="return validaForm();" type="submit" value="CADASTRAR" style="margin: 0 auto 4px;"></div>
                 <div class="col-xs-12 col-md-6">
